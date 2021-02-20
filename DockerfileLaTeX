@@ -1,0 +1,27 @@
+# Dockerfile for AUTO / anaconda3
+# includes LaTeX distribution to use LaTeX in plots
+
+# based on anaconda3
+FROM continuumio/anaconda3
+
+# install gfortran and AUTO
+RUN apt-get -y install make gfortran && \
+    git clone https://github.com/auto-07p/auto-07p.git auto && \
+    cd /auto && \
+    ./configure && \
+    make
+
+# install TeXlive
+RUN apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended cm-super xzdec dvipng ghostscript -y
+
+# add AUTO to path
+ENV PATH="/auto/cmds:/auto/bin:${PATH}"
+ENV PYTHONPATH="/auto/python"
+ENV AUTO_DIR="/auto"
+ENV HOME="/auto"
+
+WORKDIR /auto
+
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+
+# CMD [ "/bin/bash" ]

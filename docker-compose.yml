@@ -1,0 +1,9 @@
+version:                "3"
+services:
+  auto:
+      image: rhparker/auto
+      volumes:
+        - .:/auto/workspace
+      ports:
+        - 8888:8888
+      container_name: AUTOdocker
