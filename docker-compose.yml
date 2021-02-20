@@ -2,6 +2,7 @@ version:                "3"
 services:
   auto:
       image: rhparker/auto
+      platform: linux/amd64
       volumes:
         - .:/auto/workspace
       ports:
