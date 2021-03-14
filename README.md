@@ -64,6 +64,10 @@ As an alternative, you can use ``matplotlib`` directly to plot the output from A
 
 Most of the demos from the AUTO distribution have been converted into Jupyter notebooks, with the exception of the miscellaneous demos and the HomCont demos. These demos are identical to the ones in the AUTO package, with the only changes being what is needed to get them to run in a Jupyter notebook. Each demo contain example plots of relevant output (bifurcation diagrams, solutions, both). When plotting instructions are given or plots are shown in the AUTO manual, those plots are reproduced in Jupyter.
 
+# Dockerfile
+
+By default, this uses the Docker image ``rhparker/auto`` from [dockerhub](https://hub.docker.com/). The Dockerfile used to build this image is in the git repository.
+
 
 
 
