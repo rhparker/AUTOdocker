@@ -6,7 +6,7 @@ This repository contains everything necessary to get the parameter continuation 
 
 [Docker](https://www.docker.com) is a platform that delivers OS-level virtualization via packages called containers. Containers can run on any system which supports Docker, are isolated from each other and from the host system, and contain all of the software and libraries needed for an application to run.
 
-Running AUTO in a Docker container allows the software to be run in configuration which is standard across all platforms. Furthermore, you can run AUTO this way without have it (or any of the software it requires) installed on your system! Interfacing with AUTO can be done using both the command line and Jupyter notebooks. This package contains Jupyter notebooks for most of the AUTO demos which can be used as a branch point (pun intended) for future exploration.
+Running AUTO in a Docker container allows the software to be run in configuration which is standard across all platforms. Furthermore, you can run AUTO this way without having it (or any of the software it requires) installed on your system! Interfacing with AUTO can be done using both the command line and Jupyter notebooks. This package contains Jupyter notebooks for most of the AUTO demos which can be used as a branch point (pun intended) for future exploration.
 
 # Getting started
 
