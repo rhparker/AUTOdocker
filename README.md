@@ -18,11 +18,9 @@ Running AUTO in a Docker container allows the software to be run in configuratio
 
 3. Make sure the Docker engine is running. If you installed Docker on a PC, it should be running (if it is not, or you get an error later, start Docker Desktop). If you installed Docker on a Mac, start Docker Desktop to get Docker engine running. 
 
-4. Open a shell window (Terminal/iTerm on Mac, PowerShell on Windows). Change directories to the location of the git repository. Then run  
+4. Open a shell window (Terminal/iTerm on Mac, PowerShell on Windows). Change directories to the location of the git repository. To start the Docker container and run a Jupyter notebook in it, run
 
         docker-compose up
-
-to start the Docker container and run a Jupyter notebook in it. 
 
 5. Copy/paste the URL for the Jupyter notebook into your browser to start Jupyter (in Windows PowerShell, the Enter key copies what is selected; I don't know either). By default, Jupyter starts in directory where AUTO is installed. In Jupyter, change directories to the ``workspace`` directory. The  ``workspace`` directory mirrors the directory where you started Docker. Everything outside of that directory lives only inside the Docker container, and will be lost when the container is stopped.
 
