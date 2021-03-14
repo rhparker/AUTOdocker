@@ -48,6 +48,8 @@ In a shell window, change to the directory you wish to use for your AUTO project
 
 On Mac or UNIX systems, type
 
+        docker run -it -v $PWD:/auto/workspace --entrypoint /bin/bash rhparker/auto
+
 This gives you shell access to the Docker container, with the AUTO working directory as the home directory. The directory where you started Docker is mirrored as ``workspace``, which you can always get to using ``cd ~/workspace``. You can start the AUTO interactive console by running ``auto``. The AUTO python libraries can be easily imported, e.g.
 
         from auto import AUTOCommands as ac
@@ -62,13 +64,19 @@ As an alternative, you can use ``matplotlib`` directly to plot the output from A
 
 # Demos
 
-Most of the demos from the AUTO distribution have been converted into Jupyter notebooks, with the exception of the miscellaneous demos and the HomCont demos. These demos are identical to the ones in the AUTO package, with the only changes being what is needed to get them to run in a Jupyter notebook. Each demo contain example plots of relevant output (bifurcation diagrams, solutions, both). When plotting instructions are given or plots are shown in the AUTO manual, those plots are reproduced in Jupyter.
+Most of the demos from the AUTO distribution have been converted into Jupyter notebooks, with the exception of the miscellaneous demos and the HomCont demos. These demos are identical to the ones in the AUTO package, with the only changes being what is needed to get them to run in a Jupyter notebook. Each demo contain example plots of relevant output (bifurcation diagrams, solutions, both). When plotting instructions are given or plots are shown in the AUTO manual, those plots are reproduced in Jupyter. You can also look at the Jupyter notebooks for individual demos (including the plots) directly on Github.
 
 # Dockerfile
 
 By default, this uses the Docker image ``rhparker/auto`` from [dockerhub](https://hub.docker.com/). The Dockerfile used to build this image is in the git repository.
 
+# Troubleshooting
 
+If on occasion the Docker container does not start, try running
+
+        docker container prune
+
+to remove Docker containers that are no longer active but did not complete shut down.
 
 
 
