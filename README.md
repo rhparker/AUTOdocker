@@ -40,7 +40,7 @@ to start the Docker container and run a Jupyter notebook in it. Your project dir
 
 # Running AUTO from the command line
 
-In a shell window, change to the directory you wish to use for your AUTO project. Make sure Docker engine is running. On Windows PowerShell, type
+Using the command line interface to AUTO only requires Docker to be installed on your system. It does not require this repository. In a shell window, change to the directory you wish to use for your AUTO project. Make sure Docker engine is running. On Windows PowerShell, type
 
         docker run -it -v ${PWD}:/auto/workspace --entrypoint /bin/bash rhparker/auto
 
