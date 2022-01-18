@@ -34,7 +34,7 @@ Running AUTO in a Docker container allows the software to be run in configuratio
 
 Copy the ``docker-compose.yml`` file to your project directory and run 
 
-        docker-compose up
+        docker compose up
 
 to start the Docker container and run a Jupyter notebook in it. Your project directory will be mirrored in ``/workspace`` (you can change the directory name by editing the ``docker-compose.yml`` file). If you like, you can use ``demos/demotemplate.ipynb`` from the original git repository as a bare-bones template, or you can start with one of the demos.
 
